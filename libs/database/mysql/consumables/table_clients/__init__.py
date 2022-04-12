@@ -1,0 +1,6 @@
+from .ask_help_table_client import AskHelpTableClient
+from .cities_table_client import CitiesTableClient
+from .offer_help_table_client import OfferHelpTableClient
+from .people_table_client import PeopleTableClient
+from .regions_table_client import RegionsTableClient
+from .volunteer_table_client import VolunteerTableClient

@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+
+  redis:
+    image: bitnami/redis:latest
+    restart: unless-stopped
+    env_file: redis/redis.env
+
+  bot:
+    restart: unless-stopped
+    env_file: bot/bot.env
+    build:
+      context: ./
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.101.0.0/24
